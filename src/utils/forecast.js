@@ -8,7 +8,8 @@ const forecast = (lat,long,cb) => {
         } else if (body.error) {
             cb('unable to locate',undefined)
         } else {
-            cb(undefined,body.current.temperature + ' deg out . there is a ' + body.current.feelslike + ' chance of rain.')
+            console.log(body.current)
+            cb(undefined,body.current.temperature + ' deg out . there is a ' + body.current.feelslike + ' chance of rain. and its very humid of ' + body.current.humidity + ' with visibility of ' +body.current.visibility)
         }
     })
 }
